@@ -3,6 +3,7 @@
 	<div>
 		<span ref="spanRef">Span</span>
 	</div>
+	<button @click="onClickBtn($event)">Event</button>
 </template>
 
 <script lang="ts">
@@ -21,9 +22,14 @@
 					spanRef.value.textContent = 'this is span';
 				}
 			});
+			const onClickBtn = (e: Event) => {
+				const target = e.target as HTMLElement;
+				console.log(target);
+			};
 			return {
 				inputRef,
 				spanRef,
+				onClickBtn,
 			};
 		},
 	});
