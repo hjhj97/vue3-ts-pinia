@@ -12,6 +12,12 @@ const routes: Array<RouteRecordRaw> = [
 		component: () =>
 			import(/* webpackChunkName: "about" */ '../views/ch1_simple-counter/SimpleCounter.vue'),
 	},
+	{
+		path: '/pinia_counter',
+		name: 'PiniaCounter',
+		component: () =>
+			import(/* webpackChunkName: "about" */ '../views/ch2_pinia-counter/PiniaCounter.vue'),
+	},
 ];
 
 const router = createRouter({
