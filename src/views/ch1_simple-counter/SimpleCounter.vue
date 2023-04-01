@@ -15,14 +15,15 @@
 	export default defineComponent({
 		setup() {
 			const count = ref<number>(0);
-			const onClickAdd = (): void => {
+			const onClickAdd = () => {
 				count.value++;
 			};
-			const onClickSubtract = (): void => {
+			const onClickSubtract = () => {
 				count.value--;
 			};
 			return {
 				count,
+				//
 				onClickAdd,
 				onClickSubtract,
 			};
