@@ -1,6 +1,6 @@
 <template>
 	<div v-for="todo in todos" :key="todo.id">
-		<TodoItem v-bind="{ todo }" />
+		<TodoItem v-bind="{ todo }" @delete-todo="onDeleteTodo" />
 	</div>
 </template>
 
@@ -10,13 +10,17 @@
 	import TodoItem from './TodoItem.vue';
 
 	export default defineComponent({
+		components: { TodoItem },
 		props: {
 			todos: Object as PropType<Todo[]>,
 		},
-		setup() {
-			return {};
+		emits: ['delete-todo'],
+		setup(_, { emit }) {
+			const onDeleteTodo = (data: number) => {
+				emit('delete-todo', data);
+			};
+			return { onDeleteTodo };
 		},
-		components: { TodoItem },
 	});
 </script>
 

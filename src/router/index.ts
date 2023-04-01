@@ -18,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
 		component: () =>
 			import(/* webpackChunkName: "about" */ '../views/ch2_pinia-counter/PiniaCounter.vue'),
 	},
+	{
+		path: '/todo_crud',
+		name: 'TodoCRUD',
+		component: () => import(/* webpackChunkName: "about" */ '../views/ch3_todo-crud/TodoCRUD.vue'),
+	},
 ];
 
 const router = createRouter({
