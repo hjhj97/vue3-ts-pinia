@@ -5,6 +5,7 @@
 		<router-link :to="{ name: 'PiniaCounter' }">2.piniaCounter</router-link>
 		<router-link :to="{ name: 'TodoCRUD' }">3.TodoCRUD</router-link>
 		<router-link :to="{ name: 'FetchTodo' }">4.FetchTodo</router-link>
+		<router-link :to="{ name: 'TemplateRef' }">5.TemplateRef</router-link>
 	</nav>
 </template>
 

@@ -35,6 +35,12 @@ const routes: Array<RouteRecordRaw> = [
 		component: () =>
 			import(/* webpackChunkName: "about" */ '../views/ch4_fetch-todo/TodoDetail.vue'),
 	},
+	{
+		path: '/template_ref',
+		name: 'TemplateRef',
+		component: () =>
+			import(/* webpackChunkName: "about" */ '../views/ch5_TemplateRef/TemplateRef.vue'),
+	},
 ];
 
 const router = createRouter({
