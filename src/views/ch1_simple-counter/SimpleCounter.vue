@@ -2,6 +2,7 @@
 	<h1>Simple Counter</h1>
 	<h3>Not using state</h3>
 	<div>{{ count }}</div>
+	<div>square : {{ square }}</div>
 	<div>
 		<button @click="onClickAdd">+</button>
 		<button @click="onClickSubtract">-</button>
@@ -10,7 +11,7 @@
 </template>
 
 <script lang="ts">
-	import { defineComponent, ref } from 'vue';
+	import { computed, defineComponent, ref } from 'vue';
 
 	export default defineComponent({
 		setup() {
@@ -21,8 +22,13 @@
 			const onClickSubtract = () => {
 				count.value--;
 			};
+
+			const square = computed<number>(() => {
+				return count.value * count.value;
+			});
 			return {
 				count,
+				square,
 				//
 				onClickAdd,
 				onClickSubtract,
