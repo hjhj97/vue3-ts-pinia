@@ -1,7 +1,9 @@
 <template>
 	<div class="todo-item">
 		<div>
-			<p>title : {{ todo.title }}</p>
+			<router-link :to="{ name: 'TodoDetail', params: { todoId: todo.id } }"
+				>title : {{ todo.title }}</router-link
+			>
 			<p>id : {{ todo.id }}</p>
 			<p>userId : {{ todo.userId }}</p>
 			<p>completed : {{ todo.completed }}</p>
@@ -30,5 +32,6 @@
 <style scoped>
 	.todo-item {
 		border: 1px solid black;
+		display: flex;
 	}
 </style>

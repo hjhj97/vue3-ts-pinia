@@ -13,3 +13,13 @@ export function fetchTodos() {
 		);
 	});
 }
+export function fetchTodoDetail(param: string) {
+	return new Promise<Todo>((resolve, reject) => {
+		fetchData(
+			`https://jsonplaceholder.typicode.com/todos/${param}`,
+			{},
+			(res) => resolve(res),
+			(fail) => reject(fail),
+		);
+	});
+}

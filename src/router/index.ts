@@ -23,6 +23,18 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'TodoCRUD',
 		component: () => import(/* webpackChunkName: "about" */ '../views/ch3_todo-crud/TodoCRUD.vue'),
 	},
+	{
+		path: '/fetch_todo',
+		name: 'FetchTodo',
+		component: () =>
+			import(/* webpackChunkName: "about" */ '../views/ch4_fetch-todo/FetchTodo.vue'),
+	},
+	{
+		path: '/todo/detail/:todoId',
+		name: 'TodoDetail',
+		component: () =>
+			import(/* webpackChunkName: "about" */ '../views/ch4_fetch-todo/TodoDetail.vue'),
+	},
 ];
 
 const router = createRouter({
