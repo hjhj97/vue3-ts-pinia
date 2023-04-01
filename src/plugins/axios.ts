@@ -2,7 +2,7 @@ import router from '@/router';
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
 
 axios.interceptors.request.use(
-	(request: AxiosRequestConfig): AxiosRequestConfig => {
+	(request) => {
 		//요청을 보내기 전
 		return request;
 	},
