@@ -11,11 +11,17 @@
 </template>
 
 <script lang="ts">
-	import { computed, defineComponent, ref } from 'vue';
+	import { computed, defineComponent, onMounted, ref } from 'vue';
+	import { createHead } from '@vueuse/head';
 
 	export default defineComponent({
 		setup() {
 			const count = ref<number>(0);
+
+			onMounted(() => {
+				createHead({ title: 'Simple Counter' });
+			});
+
 			const onClickAdd = () => {
 				count.value++;
 			};
